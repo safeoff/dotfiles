@@ -1,0 +1,3 @@
+--langdef=ERB
+--langmap=ERB:.ERB
+--regex-ERB=/(^|^;!;)@([^(,\n]+)/\2/f,functions/

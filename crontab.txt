@@ -1,0 +1,8 @@
+55 4 * * * crontab -l > crontab.txt
+#0 5 * * * cd shogi-tactics; python create.py --wars safeoff --rule 10m
+16 6 * * * cd storage/shared/app/make-learning-podcast; bash anki_learning.sh system
+18 6 * * * cd storage/shared/app/make-learning-podcast; bash anki_learning.sh forest
+#20 6 * * 6 until ./youtube-dl -x --audio-format mp3 -o 'storage/shared/Music/mp3data/%(title)s.mp4' --download-archive youtube-dl-archive.txt --playlist-start 1 --playlist-end 3 https://www.nicovideo.jp/user/39476/video?rss=2.0; do continue; done
+35 6 * * 3 cd storage/shared/app/dlmp3; ruby main.rb tokyopod
+40 6 * * 1 cd storage/shared/app/dlmp3; ruby main.rb nichiten
+45 6 * * 2-6 cd storage/shared/app/dlmp3; ruby main.rb ss954

@@ -1,0 +1,39 @@
+[submodule "taglist.vim"]
+	path = taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule ".vim/pack/mypackage/start/taglist.vim"]
+	path = .vim/pack/mypackage/start/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule ".vim/pack/mypackage/start/vim-dirdiff"]
+	path = .vim/pack/mypackage/start/vim-dirdiff
+	url = https://github.com/will133/vim-dirdiff.git
+[submodule ".vim/pack/mypackage/start/ale"]
+	path = .vim/pack/mypackage/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule ".vim/pack/mypackage/start/vim-quickrun"]
+	path = .vim/pack/mypackage/start/vim-quickrun
+	url = https://github.com/thinca/vim-quickrun.git
+[submodule ".vim/pack/mypackage/start/vim-fugitive"]
+	path = .vim/pack/mypackage/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/mypackage/start/vim-instant-markdown"]
+	path = .vim/pack/mypackage/start/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown.git
+[submodule ".vim/pack/mypackage/start/vimproc.vim"]
+	path = .vim/pack/mypackage/start/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule ".vim/pack/mypackage/start/vim-easy-align"]
+	path = .vim/pack/mypackage/start/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule ".vim/pack/mypackage/start/plantuml-syntax"]
+	path = .vim/pack/mypackage/start/plantuml-syntax
+	url = https://github.com/aklt/plantuml-syntax.git
+[submodule ".vim/pack/mypackage/start/vim-test"]
+	path = .vim/pack/mypackage/start/vim-test
+	url = https://github.com/janko-m/vim-test
+[submodule ".vim/pack/mypackage/start/vim-dispatch"]
+	path = .vim/pack/mypackage/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule ".vim/pack/mypackage/start/todo.txt-vim"]
+	path = .vim/pack/mypackage/start/todo.txt-vim
+	url = https://github.com/freitass/todo.txt-vim.git
