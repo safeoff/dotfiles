@@ -4,11 +4,7 @@ shopt -u histappend
 
 HISTSIZE=100000
 
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
-alias c='crond -f'
-alias u='apt -y update; apt -y upgrade; git -C ~/dotfiles submodule foreach "git checkout master; git pull origin master"'
+alias c='crond -n'
 alias ojt='g++ main.cpp; oj t -iSt 2.2'
 alias ojs='g++ main.cpp; oj s -y main.cpp'
 function ojd {
@@ -19,17 +15,13 @@ function ojd {
     cp ../../temp.cpp main.cpp; vim main.cpp;
 }
 alias ojk='kill -9 `jobs -ps`'
-alias xrnormal='xrandr --output DP-1 --rotate right --scale 1.2x1.2 --output DP-2 --pos 1296x400'
-alias xrlarge='xrandr --output DP-1 --rotate right --scale 2.4x2.4 --output DP-2 --pos 2592x1400'
-alias xrmid='xrandr --output DP-1 --rotate right --scale 1.7x1.7 --output DP-2 --pos 1837x900'
+alias xrlarge='xrandr --output DP-1 --rotate right --scale 1.7x1.7 --output DP-2 --pos 1837x900'
 alias xrdef='xrandr --output DP-1 --rotate right --scale 1x1 --output DP-2 --pos 1080x350'
 function nkfd { echo $1 | nkf -w --url-input; }
 function nkfe { echo $1 | nkf -WwMQ | tr = %; }
 function based { echo $1 | base64; }
 function basee { echo $1 | base64 -di; }
-
-# termuxで32bitの実行ファイルを動かすための設定
-# unset LD_PRELOAD
+alias scoopupdate='scoop update *; scoop cache rm *; scoop cleanup *'
 
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -99,6 +91,9 @@ export PATH=$PATH:$HOME/app/bin
 if $(tmux has-session); then
     tmux attach
 else
+    if $(uname -r | grep -q Microsoft); then
+        bash typeperf.sh &
+    fi
     tmux
 fi
 
