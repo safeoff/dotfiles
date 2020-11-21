@@ -10,7 +10,8 @@ alias ojs='g++ main.cpp; oj s -y main.cpp'
 function ojd {
     p="";
     if [[ $1 == *http* ]]; then d=`basename $1`; mkdir $d; cd $d; p=$1;
-    else d=`basename $PWD`; mkdir $1; cd $1; $p=`oj d https://atcoder.jp/contests/$d/tasks/$d\_$1`; fi
+    else d=`basename $PWD`; mkdir $1; cd $1; p=https://atcoder.jp/contests/$d/tasks/$d\_$1;
+    fi
     oj d $p;
     cp ../../temp.cpp main.cpp; vim main.cpp;
 }
