@@ -88,7 +88,6 @@ export NDKROOT=/usr/local/android-ndk-r16b
 # SH
 export PATH=$PATH:$HOME/app/bin
 
-
 if $(tmux has-session); then
     tmux attach
 else
@@ -101,7 +100,5 @@ fi
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
-export KERAS_BACKEND=plaidml.keras.backend
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 export EDITOR=vim
