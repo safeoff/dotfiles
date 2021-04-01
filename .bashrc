@@ -4,6 +4,7 @@ shopt -u histappend
 
 HISTSIZE=100000
 
+alias ls='ls --color=auto'
 alias c='crond -n'
 alias ojt='g++ main.cpp; oj t -iSt 2.2'
 alias ojs='g++ main.cpp; oj s -y main.cpp'
@@ -63,39 +64,14 @@ function promps {
     *) TITLEBAR="";;
   esac
   local BASE="\u@\h"
-  PS1="${TITLEBAR}${GREEN}${BASE}${WHITE}:${BLUE}\w${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
+  PS1="${TITLEBAR}${GREEN}${BASE}${WHITE}:${BLUE}\w${GREEN}\$(parse_git_branch)${BLUE}${WHITE}$ "
 }
 promps
 
 # vi
 alias vi=vim
 
-# KP_Enter -> Return
-#xmodmap ~/.xmodmap
-
 export TERM='xterm-256color'
-
-# GOPATH
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
-export GO111MODULE=on
-
-# JAVA
-export JAVA_HOME="/usr/lib/jvm/java-13-openjdk"
-export PATH=$PATH:/usr/local/android-ndk-r16b
-export NDKROOT=/usr/local/android-ndk-r16b
-
-# SH
-export PATH=$PATH:$HOME/app/bin
-
-if $(tmux has-session); then
-    tmux attach
-else
-    if $(uname -r | grep -q Microsoft); then
-        bash typeperf.sh &
-    fi
-    tmux
-fi
 
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
